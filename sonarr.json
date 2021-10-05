@@ -8,6 +8,12 @@
         "hide": true,
         "iconColor": "rgba(0, 211, 255, 1)",
         "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
         "type": "dashboard"
       }
     ]
@@ -15,8 +21,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 273,
-  "iteration": 1617623061759,
+  "iteration": 1633435412409,
   "links": [],
   "panels": [
     {
@@ -25,31 +30,24 @@
         "defaults": {
           "mappings": [
             {
-              "from": "",
-              "id": 1,
-              "operator": "",
-              "text": "Online",
-              "to": "",
-              "type": 1,
-              "value": "1"
+              "options": {
+                "0": {
+                  "text": "Offline"
+                },
+                "1": {
+                  "text": "Online"
+                }
+              },
+              "type": "value"
             },
             {
-              "from": "",
-              "id": 2,
-              "operator": "",
-              "text": "Offline",
-              "to": "",
-              "type": 1,
-              "value": "null"
-            },
-            {
-              "from": "",
-              "id": 3,
-              "operator": "",
-              "text": "Offline",
-              "to": "",
-              "type": 1,
-              "value": "0"
+              "options": {
+                "match": "null",
+                "result": {
+                  "text": "Offline"
+                }
+              },
+              "type": "special"
             }
           ],
           "thresholds": {
@@ -77,16 +75,14 @@
         "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": [
-            "last"
-          ],
+          "calcs": ["last"],
           "fields": "",
           "values": false
         },
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.2",
+      "pluginVersion": "8.1.5",
       "targets": [
         {
           "expr": "sonarr_system_status{job=\"$instance\"}",
@@ -108,12 +104,14 @@
         "defaults": {
           "mappings": [
             {
-              "from": "",
-              "id": 1,
-              "text": "0",
-              "to": "",
-              "type": 1,
-              "value": "null"
+              "options": {
+                "match": "null",
+                "result": {
+                  "color": "rgb(33, 147, 181)",
+                  "text": "0"
+                }
+              },
+              "type": "special"
             }
           ],
           "thresholds": {
@@ -142,16 +140,14 @@
         "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.2",
+      "pluginVersion": "8.1.5",
       "targets": [
         {
           "expr": "sonarr_episode_missing_total{job=\"$instance\"}",
@@ -174,13 +170,14 @@
         "defaults": {
           "mappings": [
             {
-              "from": "",
-              "id": 1,
-              "operator": "",
-              "text": "0",
-              "to": "",
-              "type": 1,
-              "value": "null"
+              "options": {
+                "match": "null",
+                "result": {
+                  "color": "rgb(33, 147, 181)",
+                  "text": "0"
+                }
+              },
+              "type": "special"
             }
           ],
           "thresholds": {
@@ -209,16 +206,14 @@
         "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.2",
+      "pluginVersion": "8.1.5",
       "targets": [
         {
           "expr": "sonarr_queue_total{job=\"$instance\"}",
@@ -241,13 +236,14 @@
         "defaults": {
           "mappings": [
             {
-              "from": "",
-              "id": 1,
-              "operator": "",
-              "text": "0",
-              "to": "",
-              "type": 1,
-              "value": "null"
+              "options": {
+                "match": "null",
+                "result": {
+                  "color": "rgb(33, 147, 181)",
+                  "text": "0"
+                }
+              },
+              "type": "special"
             }
           ],
           "thresholds": {
@@ -276,16 +272,14 @@
         "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.2",
+      "pluginVersion": "8.1.5",
       "targets": [
         {
           "expr": "sonarr_system_health_issues{job=\"$instance\"}",
@@ -308,13 +302,14 @@
         "defaults": {
           "mappings": [
             {
-              "from": "",
-              "id": 1,
-              "operator": "",
-              "text": "0",
-              "to": "",
-              "type": 1,
-              "value": "null"
+              "options": {
+                "match": "null",
+                "result": {
+                  "color": "rgb(33, 147, 181)",
+                  "text": "0"
+                }
+              },
+              "type": "special"
             }
           ],
           "thresholds": {
@@ -343,16 +338,14 @@
         "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.2",
+      "pluginVersion": "8.1.5",
       "targets": [
         {
           "expr": "sonarr_series_total{job=\"$instance\"}",
@@ -375,13 +368,14 @@
         "defaults": {
           "mappings": [
             {
-              "from": "",
-              "id": 1,
-              "operator": "",
-              "text": "0",
-              "to": "",
-              "type": 1,
-              "value": "null"
+              "options": {
+                "match": "null",
+                "result": {
+                  "color": "rgb(33, 147, 181)",
+                  "text": "0"
+                }
+              },
+              "type": "special"
             }
           ],
           "thresholds": {
@@ -410,16 +404,14 @@
         "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.2",
+      "pluginVersion": "8.1.5",
       "targets": [
         {
           "expr": "sonarr_series_filesize_bytes{job=\"$instance\"}",
@@ -443,13 +435,14 @@
           "decimals": 0,
           "mappings": [
             {
-              "from": "",
-              "id": 1,
-              "operator": "",
-              "text": "0",
-              "to": "",
-              "type": 1,
-              "value": "null"
+              "options": {
+                "match": "null",
+                "result": {
+                  "color": "rgb(33, 147, 181)",
+                  "text": "0"
+                }
+              },
+              "type": "special"
             }
           ],
           "thresholds": {
@@ -478,16 +471,14 @@
         "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": [
-            "last"
-          ],
+          "calcs": ["last"],
           "fields": "",
           "values": false
         },
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.2",
+      "pluginVersion": "8.1.5",
       "targets": [
         {
           "expr": "sum(increase(sonarr_episode_downloaded_total{job=\"$instance\"}[30d]))",
@@ -509,13 +500,14 @@
         "defaults": {
           "mappings": [
             {
-              "from": "",
-              "id": 1,
-              "operator": "",
-              "text": "0",
-              "to": "",
-              "type": 1,
-              "value": "null"
+              "options": {
+                "match": "null",
+                "result": {
+                  "color": "rgb(33, 147, 181)",
+                  "text": "0"
+                }
+              },
+              "type": "special"
             }
           ],
           "thresholds": {
@@ -544,16 +536,14 @@
         "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.2",
+      "pluginVersion": "8.1.5",
       "targets": [
         {
           "expr": "sonarr_series_monitored_total{job=\"$instance\"}",
@@ -577,13 +567,14 @@
           "decimals": 0,
           "mappings": [
             {
-              "from": "",
-              "id": 1,
-              "operator": "",
-              "text": "0",
-              "to": "",
-              "type": 1,
-              "value": "null"
+              "options": {
+                "match": "null",
+                "result": {
+                  "color": "rgb(33, 147, 181)",
+                  "text": "0"
+                }
+              },
+              "type": "special"
             }
           ],
           "thresholds": {
@@ -612,16 +603,14 @@
         "justifyMode": "center",
         "orientation": "auto",
         "reduceOptions": {
-          "calcs": [
-            "last"
-          ],
+          "calcs": ["last"],
           "fields": "",
           "values": false
         },
         "text": {},
         "textMode": "auto"
       },
-      "pluginVersion": "7.5.2",
+      "pluginVersion": "8.1.5",
       "targets": [
         {
           "expr": "sum(increase(sonarr_episode_downloaded_total{job=\"$instance\"}[7d]))",
@@ -669,9 +658,7 @@
         "displayMode": "gradient",
         "orientation": "horizontal",
         "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
+          "calcs": ["lastNotNull"],
           "fields": "",
           "values": false
         },
@@ -681,7 +668,7 @@
           "valueSize": 10
         }
       },
-      "pluginVersion": "7.5.2",
+      "pluginVersion": "8.1.5",
       "targets": [
         {
           "expr": "sort_desc(sum(sonarr_episode_quality_total{job=\"$instance\"}) by (quality))",
@@ -699,10 +686,6 @@
     },
     {
       "datasource": "Loki",
-      "fieldConfig": {
-        "defaults": {},
-        "overrides": []
-      },
       "gridPos": {
         "h": 11,
         "w": 22,
@@ -712,14 +695,17 @@
       "id": 15,
       "options": {
         "dedupStrategy": "none",
+        "enableLogDetails": true,
+        "prettifyLogMessage": false,
+        "showCommonLabels": false,
         "showLabels": false,
-        "showTime": false,
+        "showTime": true,
         "sortOrder": "Descending",
         "wrapLogMessage": true
       },
       "targets": [
         {
-          "expr": "{app_kubernetes_io_name=\"sonarr\"} !~ \"Sending HTTP request to http://localhost:8989\"",
+          "expr": "{job=\"$loki_instance\"} !~ \"Sending HTTP request to http://localhost:8989\"",
           "refId": "A"
         }
       ],
@@ -729,8 +715,8 @@
       "type": "logs"
     }
   ],
-  "refresh": "1m",
-  "schemaVersion": 27,
+  "refresh": "",
+  "schemaVersion": 30,
   "style": "dark",
   "tags": [],
   "templating": {
@@ -738,9 +724,9 @@
       {
         "allValue": null,
         "current": {
-          "selected": true,
-          "text": "media/sonarr",
-          "value": "media/sonarr"
+          "selected": false,
+          "text": "sonarr-metrics",
+          "value": "sonarr-metrics"
         },
         "datasource": null,
         "definition": "label_values(sonarr_system_status, job)",
@@ -751,26 +737,43 @@
         "label": "Instance",
         "multi": false,
         "name": "instance",
-        "options": [
-          {
-            "selected": true,
-            "text": "media/sonarr",
-            "value": "media/sonarr"
-          }
-        ],
+        "options": [],
         "query": {
           "query": "label_values(sonarr_system_status, job)",
           "refId": "StandardVariableQuery"
         },
-        "refresh": 0,
+        "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
         "sort": 1,
         "tagValuesQuery": "",
-        "tags": [],
         "tagsQuery": "",
         "type": "query",
         "useTags": false
+      },
+      {
+        "allValue": null,
+        "current": {
+          "selected": false,
+          "text": "downloads/sonarr",
+          "value": "downloads/sonarr"
+        },
+        "datasource": "Loki",
+        "definition": "label_values(job)",
+        "description": null,
+        "error": null,
+        "hide": 0,
+        "includeAll": false,
+        "label": null,
+        "multi": false,
+        "name": "loki_instance",
+        "options": [],
+        "query": "label_values(job)",
+        "refresh": 1,
+        "regex": "/.*sonarr*/",
+        "skipUrlSync": false,
+        "sort": 0,
+        "type": "query"
       }
     ]
   },
@@ -782,5 +785,5 @@
   "timezone": "",
   "title": "Sonarr",
   "uid": "A8iPssjZd",
-  "version": 8
+  "version": 1
 }
